@@ -24,29 +24,30 @@
 <script>
 const WA='917900900012';
 const defaults=[
- {id:1,name:'Chicken Dum Biryani',cat:'Biryani',price:0,portion:'Full',img:'https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=85',desc:'Aromatic biryani with classic Hyderabadi-inspired flavours.',note:'Price confirm'},
- {id:2,name:'Mutton Biryani',cat:'Biryani',price:0,portion:'Full',img:'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=900&q=85',desc:'Rich, hearty biryani for mutton lovers.',note:'Price confirm'},
- {id:3,name:'Tawa Tandoori',cat:'Chicken Snacks',price:240,full:460,portion:'Half',img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85',desc:'Tandoori chicken snack.',note:'Half / Full'},
- {id:4,name:'Tandoori',cat:'Chicken Snacks',price:180,full:340,portion:'Half',img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85',desc:'Classic tandoori favourite.',note:'Half / Full'},
- {id:5,name:'Chicken Fry',cat:'Chicken Snacks',price:180,full:340,portion:'Half',img:'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=85',desc:'Crispy, flavourful chicken fry.',note:'Half / Full'},
- {id:6,name:'Chicken Tikka (8 pcs)',cat:'Chicken Snacks',price:150,img:'https://images.unsplash.com/photo-1610057099431-d73a1c9ec9bf?auto=format&fit=crop&w=900&q=85',desc:'Tikka pieces grilled with spices.'},
- {id:7,name:'Chicken Malai Tikka (8 pcs)',cat:'Chicken Snacks',price:180,img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85',desc:'Creamy-style malai tikka.'},
- {id:8,name:'Chicken 65 (Per Plate)',cat:'Chicken Snacks',price:160,img:'https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85',desc:'Spicy chicken snack.'},
- {id:9,name:'Bhathi Ke Murg (4 Leg pcs)',cat:'Chicken Snacks',price:240,img:'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=85',desc:'Four-piece chicken special.'},
+ {id:1,name:'Chicken Dum Biryani',cat:'Biryani',price:0,portion:'Full',img:'https://images.unsplash.com/photo-1782541370275-6761522e39d1?auto=format&fit=crop&w=900&q=85',desc:'Aromatic biryani with classic Hyderabadi-inspired flavours.',note:'Price confirm'},
+ {id:2,name:'Mutton Biryani',cat:'Biryani',price:0,portion:'Full',img:'https://images.unsplash.com/photo-1633945274309-2c16c9682a8c?auto=format&fit=crop&w=900&q=85',desc:'Rich, hearty biryani for mutton lovers.',note:'Price confirm'},
+ {id:3,name:'Tawa Tandoori',cat:'Chicken Snacks',price:240,full:460,portion:'Half',img:'https://images.unsplash.com/photo-1641873933980-fcff60026f50?auto=format&fit=crop&w=900&q=85',desc:'Tandoori chicken snack.',note:'Half / Full'},
+ {id:4,name:'Tandoori',cat:'Chicken Snacks',price:180,full:340,portion:'Half',img:'https://images.unsplash.com/photo-1617692855027-33b14f061079?auto=format&fit=crop&w=900&q=85',desc:'Classic tandoori favourite.',note:'Half / Full'},
+ {id:5,name:'Chicken Fry',cat:'Chicken Snacks',price:180,full:340,portion:'Half',img:'https://images.unsplash.com/photo-1567529854970-ce2c4207e242?auto=format&fit=crop&w=900&q=85',desc:'Crispy, flavourful chicken fry.',note:'Half / Full'},
+ {id:6,name:'Chicken Tikka (8 pcs)',cat:'Chicken Snacks',price:150,img:'https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=900&q=85',desc:'Tikka pieces grilled with spices.'},
+ {id:7,name:'Chicken Malai Tikka (8 pcs)',cat:'Chicken Snacks',price:180,img:'https://images.unsplash.com/photo-1781332151269-adfdc2a1c3c2?auto=format&fit=crop&w=900&q=85',desc:'Creamy-style malai tikka.'},
+ {id:8,name:'Chicken 65 (Per Plate)',cat:'Chicken Snacks',price:160,img:'https://images.unsplash.com/photo-1693820488674-4f8c98fbc0f9?auto=format&fit=crop&w=900&q=85',desc:'Spicy chicken snack.'},
+ {id:9,name:'Bhathi Ke Murg (4 Leg pcs)',cat:'Chicken Snacks',price:240,img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85',desc:'Four-piece chicken special.'},
  {id:10,name:'Tawa Mutton (Dry)',cat:'Mutton Snacks',price:260,img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85',desc:'Dry-style tawa mutton.'},
- {id:11,name:'Cheesy Mutton (Special)',cat:'Mutton Snacks',price:480,img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85',desc:'Special cheesy mutton.'},
- {id:12,name:'Cream Mutton (Special)',cat:'Mutton Snacks',price:440,img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85',desc:'Special cream mutton.'},
- {id:13,name:'Mutton Tawa Tandoori',cat:'Mutton Snacks',price:450,img:'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85',desc:'Tawa-style mutton tandoori.'},
- {id:14,name:'Mutton Shami Kabab (2/4)',cat:'Mutton Snacks',price:120,img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85',desc:'Shami kebab portion.'},
- {id:15,name:'Paneer Lababdar (Special)',cat:'Veg',price:180,img:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85',desc:'Special paneer lababdar.'},
- {id:16,name:'Shahi Paneer',cat:'Veg',price:140,img:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85',desc:'Rich Indian paneer curry.'},
+ {id:11,name:'Cheesy Mutton (Special)',cat:'Mutton Snacks',price:480,img:'https://images.unsplash.com/photo-1606843046080-45bf7a23c39f?auto=format&fit=crop&w=900&q=85',desc:'Special cheesy mutton.'},
+ {id:12,name:'Cream Mutton (Special)',cat:'Mutton Snacks',price:440,img:'https://images.unsplash.com/photo-1608684363982-d2d470f0b4bc?auto=format&fit=crop&w=900&q=85',desc:'Special cream mutton.'},
+ {id:13,name:'Mutton Tawa Tandoori',cat:'Mutton Snacks',price:450,img:'https://images.unsplash.com/photo-1620167790054-de54f34308bb?auto=format&fit=crop&w=900&q=85',desc:'Tawa-style mutton tandoori.'},
+ {id:14,name:'Mutton Shami Kabab (2/4)',cat:'Mutton Snacks',price:120,img:'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=900&q=85',desc:'Shami kebab portion.'},
+ {id:15,name:'Paneer Lababdar (Special)',cat:'Veg',price:180,img:'https://images.unsplash.com/photo-1631452180539-96aca7d48617?auto=format&fit=crop&w=900&q=85',desc:'Special paneer lababdar.'},
+ {id:16,name:'Shahi Paneer',cat:'Veg',price:140,img:'https://images.unsplash.com/photo-1606471191009-63994c53433b?auto=format&fit=crop&w=900&q=85',desc:'Rich Indian paneer curry.'},
  {id:17,name:'Kadhai Paneer',cat:'Veg',price:130,img:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85',desc:'Kadhai-style paneer.'},
- {id:18,name:'Butter Paneer',cat:'Veg',price:140,img:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85',desc:'Paneer in buttery gravy.'},
- {id:19,name:'Paneer Masala',cat:'Veg',price:130,img:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85',desc:'Paneer masala.'},
- {id:20,name:'Mutter Paneer',cat:'Veg',price:130,img:'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85',desc:'Paneer and peas curry.'},
- {id:21,name:'Paneer Tikka',cat:'Veg',price:130,img:'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85',desc:'Grilled paneer tikka.'}
+ {id:18,name:'Butter Paneer',cat:'Veg',price:140,img:'https://images.unsplash.com/photo-1690401767645-595de0e0e5f8?auto=format&fit=crop&w=900&q=85',desc:'Paneer in buttery gravy.'},
+ {id:19,name:'Paneer Masala',cat:'Veg',price:130,img:'https://images.unsplash.com/photo-1666001120694-3ebe8fd207be?auto=format&fit=crop&w=900&q=85',desc:'Paneer masala.'},
+ {id:20,name:'Mutter Paneer',cat:'Veg',price:130,img:'https://images.unsplash.com/photo-1767114915989-c6ab3c8fc42e?auto=format&fit=crop&w=900&q=85',desc:'Paneer and peas curry.'},
+ {id:21,name:'Paneer Tikka',cat:'Veg',price:130,img:'https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=85',desc:'Grilled paneer tikka.'}
 ];
 let menu=JSON.parse(localStorage.getItem('dbh_menu')||'null')||defaults,cart=[],category='All';
+menu.forEach(m=>{const d=defaults.find(x=>x.id===m.id);if(d)m.img=d.img});
 const cats=['All','Biryani','Chicken Snacks','Mutton Snacks','Veg','Kebabs','Drinks'];
 function money(n){return n?`₹${n}`:'Price on request'}
 function renderCats(){document.getElementById('cats').innerHTML=cats.slice(1).map(c=>`<button class="cat ${category===c?'active':''}" onclick="setCat('${c}',this)">${c}</button>`).join('')}
